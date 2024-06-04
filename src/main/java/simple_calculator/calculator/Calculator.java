@@ -5,7 +5,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +12,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
-import javafx.scene.control.DialogPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
@@ -58,6 +56,7 @@ public class Calculator {
     private String saveOperanding;
 
     private boolean valueSaveCleared;
+    private boolean changeToB;
 
     public Calculator(Stage stage) {
         FXMLLoader loader = new FXMLLoader();
@@ -78,6 +77,7 @@ public class Calculator {
         }
 
         this.valueSaveCleared = true;
+        this.changeToB = false;
     }
     
     @FXML
@@ -130,6 +130,14 @@ public class Calculator {
                 outputField.setText(outputField.getText() + "0");
             }
         }
+
+        String sValue = String.valueOf(outputField.getText()); // Content from TextField on String
+
+        if (!changeToB) {
+            this.valueA = Long.valueOf(sValue); // Content from TextField on int
+        } else {
+            this.valueB = Long.valueOf(sValue);
+        }
     }
 
     @FXML
@@ -145,20 +153,14 @@ public class Calculator {
     }
 
     @FXML
-    private void calculateAction (MouseEvent event) {
+    private void calculateAction(MouseEvent event) {
         try {
-            Button button = (Button)event.getSource();
+            Button button = (Button) event.getSource();
             String sValue = String.valueOf(outputField.getText()); // Content from TextField on String
-    
-            if (valueA == null) {
-                this.valueA = Long.valueOf(sValue); // Content from TextField on int
-            } else {
-                this.valueB = Long.valueOf(sValue);
-            }
-
+            
             this.valueSaveCleared = false;
-    
-            switch(button.getText()) {
+
+            switch (button.getText()) {
                 case "+" -> {
                     if (valueA != null && valueB != null) {
                         this.result = resultWithSaveOperanding(valueA, valueB);
@@ -171,7 +173,7 @@ public class Calculator {
                     }
                     this.saveOperanding = "+";
                 }
-    
+
                 case "-" -> {
                     if (valueA != null && valueB != null) {
                         this.result = resultWithSaveOperanding(valueA, valueB);
@@ -185,7 +187,7 @@ public class Calculator {
                     this.saveOperanding = "-";
 
                 }
-    
+
                 case "*" -> {
                     if (valueA != null && valueB != null) {
                         this.result = resultWithSaveOperanding(valueA, valueB);
@@ -199,7 +201,7 @@ public class Calculator {
                     this.saveOperanding = "*";
 
                 }
-    
+
                 case "/" -> {
                     if (valueA != null && valueB != null) {
                         this.result = resultWithSaveOperanding(valueA, valueB);
@@ -213,7 +215,7 @@ public class Calculator {
                     this.saveOperanding = "/";
 
                 }
-    
+
                 case "%" -> {
                     if (valueA != null && valueB != null) {
                         this.result = resultWithSaveOperanding(valueA, valueB);
@@ -227,13 +229,24 @@ public class Calculator {
                     this.saveOperanding = "%";
 
                 }
-    
+
             }
+
+            changeToB = true;
         } catch (NumberFormatException e) {
             Alert alert = new Alert(AlertType.ERROR);
             alert.setHeaderText("El numero proporcionado es demasiado grande");
             alert.show();
         }
+    }
+
+    @FXML
+    private void clearCalculator () {
+        this.outputField.clear();
+        this.valueA = null;
+        this.valueB = null;
+        this.changeToB = false;
+        this.savedNumField.setText("");
     }
 
     private long resultWithSaveOperanding (Long valueA, Long valueB) {
@@ -269,7 +282,7 @@ public class Calculator {
         }
 
         this.result = resultWithSaveOperanding(valueA, valueB);
-        valueA = null;
+        valueA = result;
         valueB = null;
         this.outputField.setText(String.valueOf(result));
     }
