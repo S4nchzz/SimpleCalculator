@@ -5,14 +5,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="362.0" style="-fx-background-color: #B58EAF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="362.0" style="-fx-background-color: #bea6ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane fx:id="paneOutputInfoDecoration" layoutX="14.0" layoutY="16.0" prefHeight="99.0" prefWidth="335.0" stylesheets="@css/calculator.css" />
       <Pane fx:id="paneOutputInfo" layoutX="24.0" layoutY="29.0" prefHeight="72.0" prefWidth="314.0" stylesheets="@css/calculator.css" />
       <Pane fx:id="buttonPaneDecoration" layoutX="14.0" layoutY="118.0" prefHeight="300.0" prefWidth="335.0" stylesheets="@css/calculator.css" />
       <Pane layoutX="24.0" layoutY="130.0">
          <children>
-            <Button fx:id="equalsButton" layoutX="249.0" layoutY="146.0" mnemonicParsing="false" prefHeight="129.0" prefWidth="65.0" stylesheets="@css/calculator.css" text="=">
+            <Button fx:id="equalsButton" layoutX="249.0" layoutY="219.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="65.0" stylesheets="@css/calculator.css" text="=">
                <font>
                   <Font name="Poppins SemiBold" size="25.0" />
                </font></Button>
@@ -57,17 +57,17 @@
                   <Font name="Poppins SemiBold" size="25.0" />
                </font>
             </Button>
-            <Button fx:id="cButton" mnemonicParsing="false" prefHeight="53.0" prefWidth="65.0" stylesheets="@css/calculator.css" text="C">
+            <Button fx:id="cButton" layoutX="249.0" layoutY="146.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="65.0" stylesheets="@css/calculator.css" text="C">
                <font>
                   <Font name="Poppins SemiBold" size="25.0" />
                </font>
             </Button>
-            <Button fx:id="plusButton" layoutX="83.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="65.0" stylesheets="@css/calculator.css" text="+">
+            <Button fx:id="plusButton" mnemonicParsing="false" prefHeight="53.0" prefWidth="65.0" stylesheets="@css/calculator.css" text="+">
                <font>
                   <Font name="Poppins SemiBold" size="25.0" />
                </font>
             </Button>
-            <Button fx:id="divideButton" layoutX="165.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="65.0" stylesheets="@css/calculator.css" text="/">
+            <Button fx:id="divideButton" layoutX="249.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="65.0" stylesheets="@css/calculator.css" text="/">
                <font>
                   <Font name="Poppins SemiBold" size="17.0" />
                </font>
@@ -77,7 +77,12 @@
                   <Font name="Poppins SemiBold" size="25.0" />
                </font>
             </Button>
-            <Button fx:id="multiplayButton" layoutX="249.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="65.0" stylesheets="@css/calculator.css" text="*" textAlignment="CENTER">
+            <Button fx:id="multiplayButton" layoutX="165.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="65.0" stylesheets="@css/calculator.css" text="*" textAlignment="CENTER">
+               <font>
+                  <Font name="Poppins SemiBold" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="restButton" layoutX="83.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="65.0" stylesheets="@css/calculator.css" text="-" textAlignment="CENTER">
                <font>
                   <Font name="Poppins SemiBold" size="25.0" />
                </font>
