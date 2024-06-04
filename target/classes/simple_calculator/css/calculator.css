@@ -1,0 +1,29 @@
+#paneOutputInfo {
+    -fx-background-color: rgb(226, 225, 225);   
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+#cButton {
+    -fx-background-color: #FE901B;
+    -fx-border-color: #fdba72;
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+#plusButton, #divideButton, #multiplayButton, #nineButton, #eightButton, #sevenButton, #sixButton, #fiveButton, #fourButton, #threeButton, #twoButton, #oneButton, #zeroButton, #equalsButton {
+    -fx-background-color: #F1F1EF;
+    -fx-border-color: #eeabd2;
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+#buttonPaneDecoration, #paneOutputInfoDecoration {
+    -fx-border-color: #d8a3c3;
+    -fx-border-width: 2px;
+    -fx-background-color: #c486ab;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
