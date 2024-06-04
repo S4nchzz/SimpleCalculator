@@ -2,38 +2,16 @@
     -fx-background-color: rgb(226, 225, 225);   
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
+    -fx-border-color: #bcabf7;
 }
 
 #cButton {
     -fx-background-color: #FF4B4C;
-    -fx-border-color: #FF4B4C;
+    -fx-border-color: #f32626;
     -fx-border-width: 2px;
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
-}
-
-#plusButton, #divideButton, #multiplayButton, #restButton {
-    -fx-background-color: #bfe0e2;
-    -fx-border-width: 2px;
-    -fx-background-radius: 10px;
-    -fx-border-radius: 10px;
-    -fx-border-color: #843dff;
-}
-
-#nineButton, #eightButton, #sevenButton, #sixButton, #fiveButton, #fourButton, #threeButton, #twoButton, #oneButton, #zeroButton {
-    -fx-background-color: #d9ceff;
-    -fx-border-width: 2px;
-    -fx-background-radius: 10px;
-    -fx-border-radius: 10px;
-    -fx-border-color: #843dff;
-}
-
-#buttonPaneDecoration, #paneOutputInfoDecoration {
-    -fx-border-width: 2px;
-    -fx-border-color: #9f75ff;
-    -fx-background-color: #EBE5FF;
-    -fx-background-radius: 10px;
-    -fx-border-radius: 10px;
+    -fx-cursor: hand;
 }
 
 #equalsButton {
@@ -41,4 +19,42 @@
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
     -fx-background-color: #fabe25;
+    -fx-border-color: #cc9814;
+    -fx-cursor: hand;
+}
+
+#plusButton, #divideButton, #multiplayButton, #restButton, #percentajeButton {
+    -fx-background-color: #bbe0e2;
+    -fx-border-color: #96c8ca;
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-cursor: hand;
+    
+}
+
+#nineButton, #eightButton, #sevenButton, #sixButton, #fiveButton, #fourButton, #threeButton, #twoButton, #oneButton, #zeroButton {
+    -fx-background-color: #cabcff;
+    -fx-border-color: #bcabf7;
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-cursor: hand;
+}
+
+#buttonPaneDecoration, #paneOutputInfoDecoration {
+    -fx-border-width: 2px;
+    -fx-background-color: #EBE5FF;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #9c85f0;
+}
+
+#commaButton {
+    -fx-background-color: #ebe5ff;
+    -fx-border-color: #bcabf7;
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-cursor: hand;
 }
